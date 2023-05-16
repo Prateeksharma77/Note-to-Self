@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/teal_200"
+       android:layout_marginTop="12dp"
+        app:cardCornerRadius="3dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:cardElevation="22dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/listItemLayout"
+    android:background="@color/teal_200"
+   >
+    <ImageView
+        android:id="@+id/imageViewImportant"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/warning" />
+
+    <ImageView
+        android:id="@+id/imageViewTodo"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageViewImportant"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImportant"
+        app:srcCompat="@drawable/checkbox"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/imageViewIdea"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageViewTodo"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toEndOf="@+id/imageViewTodo"
+        app:srcCompat="@drawable/idea"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewImportant"
+        android:layout_marginTop="12dp"
+
+        android:text="Large Text"
+        android:textColor="@color/black"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTodo"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginTop="8dp"
+        android:text="New Text"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
